@@ -1,0 +1,17 @@
+venv/
+.venv/
+**/__pycache__/
+*.pyc
+.env
+*.log
+/data/
+QGIS/地理院DEM/
+QGIS/地理院基本地図/
+QGIS/*.qgz
+.vscode/
+Git_GitHub/
+
+# ChatGPT/Gemini Exportの生データは管理しない
+# ChatLogs/**/files/
+# ChatLogs/*_Export/**
+# ChatLogs/conversations.json

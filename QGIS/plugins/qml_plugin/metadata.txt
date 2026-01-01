@@ -1,0 +1,7 @@
+[general]
+name=QML Plugin
+description=Apply QML styles to multiple layers from project folder
+version=1.0
+qgisMinimumVersion=3.34
+author=Kihara
+email=example@example.com
