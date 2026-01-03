@@ -1,0 +1,13 @@
+io:
+  poly_file: "QGIS/slope_analysis/shiraishi_bld_poly.gpkg"
+  ref_raster: "QGIS/slope_analysis/risk_slope_0_1.tif"
+  bld_bin_tif: "QGIS/slope_analysis/houses_binary.tif"
+
+  dem_tif: "QGIS/地理院DEM/DEM_Nobeoka25_493105.tif"
+  slope_deg_tif: "QGIS/slope_analysis/DEM_Nobeoka25_slope_deg.tif"
+  slope_bin_tif: "QGIS/slope_analysis/DEM_Nobeoka25_slope_deg_bin.tif"
+  bld_risk_tif: "QGIS/slope_analysis/house_highrisk_{risk_radius_m}m.tif"
+
+params:
+  slope_threshold: 30.0
+  risk_radius_m: 20
