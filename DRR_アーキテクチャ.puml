@@ -1,0 +1,49 @@
+@startuml
+
+rectangle "geojson files from Image Processing" as P1 #ffc2f2ff
+
+rectangle "Risk segment Polygons\nAttribute Editor(AE)" as AE #d3fcddff
+
+rectangle "Point Scores\n Attributes" as DHA #dcf9dbff
+
+rectangle "QGIS viewer" as QG #b2f7fbff
+
+database "MongoDB:\nPoint Table\nRisk geojson\nAE geojson\nTIFF, PNG\nPDF\n& Metadata" as DB #f8ff9bff
+
+rectangle "QGIS viewer" as QG #b2f7fbff
+
+rectangle "Document\nIntelligence" as DI #b2f7fbff
+
+skinparam rectangle {
+  BackgroundColor #FFEAD9
+  BorderColor #C26C3D
+  RoundCorner 15
+}
+skinparam packageStyle rectangle
+skinparam nodesep 20
+skinparam ranksep 20
+skinparam shadowing false
+skinparam defaultTextAlignment center
+
+package "risk segment Module" #FFEAD9 {
+
+  rectangle "risk calculator by\nCell-based or Polygon-based\nCross section generator" as CRS1 #FFBC8D
+
+  rectangle "Final Product:\nRisk Attribute Maps\nSections\n(GeoJSON / TIFF / PNG)" as CRS2 #FFA56B
+
+
+  P1 --> AE
+  AE --> DB : geojson
+  DHA --> DB : SVG icon\ngeojson\nthrough FastAPI
+  DB <--> CRS1 : TIFF, geojson
+  CRS1 --> CRS2
+  CRS2 --> DB : TIFF, geojson
+  DHA <--> CRS1 : Error Estimation
+  DB --> QG
+  DI --> DB : PDF, etc.
+}
+
+@enduml
+
+
+

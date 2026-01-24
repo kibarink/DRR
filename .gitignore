@@ -5,11 +5,13 @@ venv/
 .env
 *.log
 /data/
-QGIS/地理院DEM/
-QGIS/地理院基本地図/
+地理院DEM/
+地理院基本地図/
+Jaxa_alos
 QGIS/*.qgz
 .vscode/
 Git_GitHub/
+
 
 # ChatGPT/Gemini Exportの生データは管理しない
 # ChatLogs/**/files/

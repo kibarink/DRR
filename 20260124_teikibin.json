@@ -1,0 +1,291 @@
+{
+  "Shubetsu" : "02",
+  "Nenban" : "2138445084",
+  "NiSangoKanyuNo" : "               ",
+  "YongoKanyuNo" : "               ",
+  "KanyuKikan" : {
+    "Kokunen" : {
+      "Dai1KanyuTsukisu" : " 48",
+      "SangoKanyuTsukisu" : "  0",
+      "KokunenKanyuKikanGokei" : " 48"
+    },
+    "FukaNofuTsukisu" : "  0",
+    "SenpoKikan" : "  0",
+    "Konen" : {
+      "KonenKikan" : "367",
+      "KonenKikan23" : "  0",
+      "KonenKikan4" : "  0",
+      "KonenKanyuKikanGokei" : "367"
+    },
+    "KanyuKikanGokei2" : "415",
+    "GassanTaishoKikan" : "  0",
+    "KanyuKikanGokei1" : "415"
+  },
+  "Mikomigaku" : {
+    "JukyuKaishiNenrei" : {
+      "HoshuHireiKaishiNenrei1" : "**",
+      "HoshuHireiKaishiNenrei2" : "**",
+      "TeigakuKaishiNenrei" : "**",
+      "RokiRokoKaishiNenrei" : "65"
+    },
+    "MikomigakuKiso" : {
+      "KisoMikomigaku" : "   786,650"
+    },
+    "MikomigakuKonen" : {
+      "KonenKikan" : {
+        "MikomigakuHireiK2" : "**********",
+        "MikomigakuTeigakuK" : "**********",
+        "MikomigakuRokiRokoK" : " 1,639,016",
+        "TeigakuMikomigaku" : "**********",
+        "KeikaKasanMikomigaku" : "       555"
+      },
+      "KonenKikan23" : {
+        "NiSangoGakuHireiK1" : "**********",
+        "MikomigakuHireiK2" : "**********",
+        "MikomigakuTeigakuK" : "**********",
+        "MikomigakuRokiRokoK" : "**********",
+        "NiSangoTeigakuHireiK1" : "**********",
+        "NiSangoGakuHireiK2" : "**********",
+        "NiSangoTeigakuTeigakuK" : "**********",
+        "NiSangoKeikaKasanGaku" : "**********",
+        "NiSangoShokuikiHireiK1" : "**********",
+        "NiSangoShokuikiHireiK2" : "**********",
+        "NiSangoShokuikiTeigakuK" : "**********",
+        "NiSangoShokuikiRokiRokoK" : "**********"
+      },
+      "KonenKikan4" : {
+        "YongoHoshuHireiK1" : "**********",
+        "MikomigakuHireiK2" : "**********",
+        "YongoTeigakuK" : "**********",
+        "YongoRokiRokoK" : "**********",
+        "YongoTeigakuHireiK1" : "**********",
+        "YongoTeigakuHireiK2" : "**********",
+        "YongoTeigakuTeigakuK" : "**********",
+        "YongoKeikaKasanMikomigaku" : "**********",
+        "YongoShokuikiHireiK1" : "**********",
+        "YongoShokuikiHireiK2" : "**********",
+        "YongoShokuikiTeigakuK" : "**********",
+        "YongoShokuikiRokiRokoK" : "**********"
+      }
+    },
+    "MikomigakuGokei" : {
+      "GokeiHoshuHireiK1" : "**********",
+      "GokeiHoshuHireiK2" : "**********",
+      "GokeiTeigakuK" : "**********",
+      "GokeiRokiRokoMikomigaku" : " 2,426,221"
+    }
+  },
+  "Tsukibetsu" : [ {
+    "ChokkinTsukibetsuNo" : "001",
+    "TaishoNen" : " 6",
+    "TaishoTsuki" : "10",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "002",
+    "TaishoNen" : " 6",
+    "TaishoTsuki" : "11",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "003",
+    "TaishoNen" : " 6",
+    "TaishoTsuki" : "12",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : " 1,479,000",
+      "KosenNofuJokyoNofugaku" : "   194,803"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "004",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : " 1",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "005",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : " 2",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "006",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : " 3",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "007",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : " 4",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "008",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : " 5",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "009",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : " 6",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : " 1,029,000",
+      "KosenNofuJokyoNofugaku" : "   153,628"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "010",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : " 7",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "011",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : " 8",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "012",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : " 9",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  }, {
+    "ChokkinTsukibetsuNo" : "013",
+    "TaishoNen" : " 7",
+    "TaishoTsuki" : "10",
+    "KokunenNoufuJokyo" : {
+      "KokunenNofuJokyoUe" : "          ",
+      "KokunenNofuJokyoShita" : "    "
+    },
+    "KonenNoufuJokyo" : {
+      "KanyuSeido" : "厚年",
+      "KosenNofuJokyoGetsugaku" : "   650,000",
+      "KosenNofuJokyoShoyo" : "          ",
+      "KosenNofuJokyoNofugaku" : "    59,475"
+    }
+  } ],
+  "HokenryoNofugaku" : {
+    "HokenryoNofugakuKokunen" : "   108,000",
+    "KounenNoufugaku" : {
+      "HokenryoNofugakuKosen" : "19,801,083",
+      "HokenryoNofugaku23" : "         0",
+      "HokenryoNofugaku4" : "         0"
+    },
+    "HokenryoNofugakuGokei1" : "19,909,083"
+  },
+  "KurisageMikomigaku70" : " 3,445,234",
+  "KurisageMikomigaku75" : " 4,464,247",
+  "Oshirase" : "",
+  "KikoChushutsuNengappi" : {
+    "KikoChushutsuGengo" : "令和",
+    "KikoChushutsuNen" : " 7",
+    "KikoChushutsuTsuki" : "12",
+    "KikoChushutsuHi" : "22"
+  },
+  "NiSangoChushutsuNengappi" : {
+    "NiSangoChushutsuGengo" : "    ",
+    "NiSangoChushutsuNen" : "  ",
+    "NiSangoChushutsuTsuki" : "  ",
+    "NiSangoChushutsuHi" : "  "
+  },
+  "YongoChushutsuNengappi" : {
+    "YongoChushutsuGengo" : "    ",
+    "YongoChushutsuNen" : "  ",
+    "YongoChushutsuTsuki" : "  ",
+    "YongoChushutsuHi" : "  "
+  }
+}
