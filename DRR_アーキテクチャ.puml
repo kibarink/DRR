@@ -1,49 +1,113 @@
 @startuml
-
-rectangle "geojson files from Image Processing" as P1 #ffc2f2ff
-
-rectangle "Risk segment Polygons\nAttribute Editor(AE)" as AE #d3fcddff
-
-rectangle "Point Scores\n Attributes" as DHA #dcf9dbff
-
-rectangle "QGIS viewer" as QG #b2f7fbff
-
-database "MongoDB:\nPoint Table\nRisk geojson\nAE geojson\nTIFF, PNG\nPDF\n& Metadata" as DB #f8ff9bff
-
-rectangle "QGIS viewer" as QG #b2f7fbff
-
-rectangle "Document\nIntelligence" as DI #b2f7fbff
-
-skinparam rectangle {
-  BackgroundColor #FFEAD9
-  BorderColor #C26C3D
-  RoundCorner 15
-}
 skinparam packageStyle rectangle
-skinparam nodesep 20
-skinparam ranksep 20
 skinparam shadowing false
 skinparam defaultTextAlignment center
 
-package "risk segment Module" #FFEAD9 {
+title Clean Architecture - Circular View with Anomaly Detection Layer
 
-  rectangle "risk calculator by\nCell-based or Polygon-based\nCross section generator" as CRS1 #FFBC8D
+' ===========================
+' CIRCULAR LAYERS
+' ===========================
 
-  rectangle "Final Product:\nRisk Attribute Maps\nSections\n(GeoJSON / TIFF / PNG)" as CRS2 #FFA56B
+circle "Goal\n(防災の最上位目的)" as Goal
+circle "Entities\n(地滑りドメインの本質)" as Entities
+circle "UseCases\n(アプリケーション振る舞い)" as UseCases
+circle "Anomaly Detection\nLayer\n(未知の兆候検知)" as Anomaly
+circle "Interface\nAdapters\n(技術抽象化)" as Adapters
+circle "Frameworks & Drivers\n(技術層)" as Frameworks
 
+' Concentric layout (hidden links)
+Goal -[hidden]-> Entities
+Entities -[hidden]-> UseCases
+UseCases -[hidden]-> Anomaly
+Anomaly -[hidden]-> Adapters
+Adapters -[hidden]-> Frameworks
 
-  P1 --> AE
-  AE --> DB : geojson
-  DHA --> DB : SVG icon\ngeojson\nthrough FastAPI
-  DB <--> CRS1 : TIFF, geojson
-  CRS1 --> CRS2
-  CRS2 --> DB : TIFF, geojson
-  DHA <--> CRS1 : Error Estimation
-  DB --> QG
-  DI --> DB : PDF, etc.
-}
+Goal <<circle>>
+Entities <<circle>>
+UseCases <<circle>>
+Anomaly <<circle>>
+Adapters <<circle>>
+Frameworks <<circle>>
+
+' ===========================
+' RELATIONSHIPS (Outer → Inner)
+' ===========================
+
+Frameworks --> Adapters : depends on
+Adapters --> Anomaly : implements ports
+Anomaly --> UseCases : anomaly signals
+UseCases --> Entities : uses domain
+Goal -[dashed]-> Entities : conceptual guidance
+Goal -[dashed]-> UseCases : conceptual guidance
+Goal -[dashed]-> Anomaly : conceptual guidance
+
+' ===========================
+' NOTES
+' ===========================
+
+note right of Goal
+  最上位の目的（Policy）
+  - 「災害を防ぐ」
+  - コードには入らないが全体を方向付ける
+end note
+
+note right of Entities
+  ドメインの不変構造
+  - SlopeUnit
+  - Valley
+  - House
+  - HazardArea
+  - MonitoringPoint
+  - CRS
+  - RiskScore
+  - AnomalyScore
+  - AnomalyFlag
+end note
+
+note right of UseCases
+  アプリケーションの振る舞い
+  - ScoreRisk
+  - IntegrateCRS
+  - MapHazardArea
+  - SearchDocuments
+  - ExplainRisk
+  - PublishAlert
+end note
+
+'false positive
+
+note right of Anomaly
+  異常検知レイヤー（unknown unknown）
+  - DetectAnomalousSegmentsUseCase
+  - DetectSpatialOutliersUseCase
+  - DetectMonitoringAnomaliesUseCase
+  - DetectKGStructuralAnomaliesUseCase
+  - IAnomalyDetectionService（抽象ポート）
+  - AnomalyScore / AnomalyFlag を生成
+end note
+
+note right of Adapters
+  技術を抽象化する層
+  - MongoGisRepository
+  - MongoVectorSearchRepository
+  - MongoKnowledgeGraphService
+  - MLBasedRiskScoringService
+  - OpenAILLMExplanationService
+  - KafkaAlertPublisher
+  - PythonImagePipelineAdapter
+  - AnomalyDetectionAdapter（画像特徴量 / 地形特徴量 / KG構造）
+end note
+
+note right of Frameworks
+  技術の実装層
+  - FastAPI
+  - MongoDB (2dsphere, Vector)
+  - QGIS
+  - Python pipeline
+  - OpenAI API
+  - DI Container
+  - YAML/JSON Config
+end note
 
 @enduml
-
-
-

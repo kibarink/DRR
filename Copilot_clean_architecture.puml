@@ -1,0 +1,92 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam defaultTextAlignment center
+
+title Clean Architecture - Circular View (Goal → Entities → UseCases → InterfaceAdapters → Frameworks)
+
+' ===========================
+' CIRCULAR LAYERS
+' ===========================
+
+circle "Goal\n(防災の最上位目的)" as Goal
+circle "Entities\n(地滑りドメインの本質)" as Entities
+circle "UseCases\n(アプリケーション振る舞い)" as UseCases
+circle "Interface\nAdapters\n(技術抽象化)" as Adapters
+circle "Frameworks & Drivers\n(技術層)" as Frameworks
+
+' Position circles concentrically
+Goal -[hidden]-> Entities
+Entities -[hidden]-> UseCases
+UseCases -[hidden]-> Adapters
+Adapters -[hidden]-> Frameworks
+
+' Force concentric layout
+Goal <<circle>>
+Entities <<circle>>
+UseCases <<circle>>
+Adapters <<circle>>
+Frameworks <<circle>>
+
+' ===========================
+' RELATIONSHIPS (Inner ← Outer)
+' ===========================
+
+Frameworks --> Adapters : depends on
+Adapters --> UseCases : implements ports
+UseCases --> Entities : uses domain
+Goal -[dashed]-> Entities : conceptual guidance
+Goal -[dashed]-> UseCases : conceptual guidance
+
+' ===========================
+' NOTES
+' ===========================
+
+note right of Goal
+  最上位の目的（Policy）
+  - 「災害を防ぐ」
+  - コードには入らないが全体を方向付ける
+end note
+
+note right of Entities
+  ドメインの不変構造
+  - SlopeUnit
+  - Valley
+  - House
+  - HazardArea
+  - MonitoringPoint
+  - CRS
+  - RiskScore
+end note
+
+note right of UseCases
+  アプリケーションの振る舞い
+  - ScoreRisk
+  - IntegrateCRS
+  - MapHazardArea
+  - SearchDocuments
+  - ExplainRisk
+  - PublishAlert
+end note
+
+note right of Adapters
+  技術を抽象化する層
+  - MongoGisRepository
+  - MongoVectorSearchRepository
+  - MongoKnowledgeGraphService
+  - MLBasedRiskScoringService
+  - OpenAILLMExplanationService
+  - KafkaAlertPublisher
+end note
+
+note right of Frameworks
+  技術の実装層
+  - FastAPI
+  - MongoDB (2dsphere, Vector)
+  - QGIS
+  - OpenAI API
+  - DI Container
+  - YAML/JSON Config
+end note
+
+@enduml
