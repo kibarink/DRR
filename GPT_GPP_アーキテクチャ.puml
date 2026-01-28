@@ -1,0 +1,111 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam defaultTextAlignment center
+
+title Circular View with Anomaly Detection Layer
+' ===========================
+' CIRCULAR LAYERS
+' ===========================
+
+circle "Goal\n(Find Giant)" as Goal
+circle "Entities\n(解釈空間 / 揺らぐもの)" as Entities
+circle "UseCases\n(検証・解釈の振る舞い)" as UseCases
+circle "Anomaly Detection\nLayer\n(解釈限界の検知)" as Anomaly
+circle "Interface\nAdapters\n(技術抽象化)" as Adapters
+circle "Frameworks & Drivers\n(技術層)" as Frameworks
+
+' Concentric layout (hidden links)
+Goal -[hidden]-> Entities
+Entities -[hidden]-> UseCases
+UseCases -[hidden]-> Anomaly
+Anomaly -[hidden]-> Adapters
+Adapters -[hidden]-> Frameworks
+
+Goal <<circle>>
+Entities <<circle>>
+UseCases <<circle>>
+Anomaly <<circle>>
+Adapters <<circle>>
+Frameworks <<circle>>
+
+' ===========================
+' RELATIONSHIPS
+' ===========================
+
+Frameworks --> Adapters : depends on
+Adapters --> Anomaly : implements ports
+
+Anomaly --> UseCases : anomaly signals
+UseCases --> Anomaly : validation / assumption update
+
+UseCases --> Entities : interprets / updates
+Entities --> Anomaly : interpretation limits
+
+Goal -[dashed]-> Entities : conceptual guidance
+Goal -[dashed]-> UseCases : conceptual guidance
+Goal -[dashed]-> Anomaly : conceptual guidance
+
+' ===========================
+' NOTES
+' ===========================
+
+note right of Goal
+  最大の目的（Policy）
+  - 「Giantを発見する」
+end note
+
+note right of Entities
+  解釈されたドメイン構造（揺らぐ）
+  - Spatial information
+  - Reservoir / Seal / Trap / Charge
+  - Geological history
+  - CRS / DHA
+  - RiskScore（不確実）
+  - Uncertainty
+  - AnomalyScore / AnomalyFlag
+    （Uncertainty の end member）
+end note
+
+note right of UseCases
+  人間中心の検証・解釈行為
+  - SearchDocuments
+  - ScoreRisk (DHA / CRS)
+  - MapRisks
+  - IntegrateCRS
+  - ExplainInterpretation
+  ※ 正解を出す層ではない
+end note
+
+note right of Anomaly
+  異常検知レイヤー
+  = 現行解釈では説明不能な兆候
+  - DetectAnomalousSegments
+  - DetectSpatialOutliers
+  - DetectKGStructuralAnomalies
+  - Generate AnomalySignal
+end note
+
+note right of Adapters
+  技術を抽象化する層
+  - MongoGisRepository
+  - MongoVectorSearchRepository
+  - MongoKnowledgeGraphService
+  - RiskScoringService
+    (AI support / Human decide)
+  - LLMExplanationService
+  - PolyPLAdapter
+end note
+
+note right of Frameworks
+  技術の実装層
+  - GPP
+  - FastAPI
+  - MongoDB (2dsphere, Vector)
+  - QGIS
+  - AI API
+  - DI Container
+  - YAML / JSON Config
+end note
+
+@enduml

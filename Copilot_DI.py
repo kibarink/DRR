@@ -124,7 +124,7 @@ class AnomalyDetectionService(IAnomalyDetectionService):
         )
 
 
-        # adapters/mongo_repositories.py
+# adapters/mongo_repositories.py
 
 # - Interface Adapters
 # - MongoRepository（Point / Risk / AE / Raster / PDF）
@@ -149,9 +149,7 @@ class MongoRiskSegmentRepository(IRiskSegmentRepository):
 
 
 
-        # adapters/image_pipeline_adapter.py
-
-
+# adapters/image_pipeline_adapter.py
 
 from domain.ports import IImageProcessingPipeline
 
@@ -166,7 +164,6 @@ class PythonImageProcessingPipeline(IImageProcessingPipeline):
 # - QGIS
 # - Python ランタイム / ライブラリ
 # - OS / ファイルシステム
-
 
         # main.py
 
@@ -209,6 +206,6 @@ def generate_risk_segments(
 # - Document Intelligence
 # を UseCase（内側） として再定義し、
 # Mongo / FastAPI / QGIS / 画像処理 pipeline を Adapter + Framework（外側） に押し出すと、
-# あなたの思想（透明性・再現性・差し替え可能性）と完全に一致する構造になる
+# システム思想（透明性・再現性・差し替え可能性）と完全に一致する構造になる
 # - DI コンテナ（FastAPI の Depends で十分）は、
 # 「UseCase が技術を知らずに済むように、外側で配線する役」 として設計するのが最適
