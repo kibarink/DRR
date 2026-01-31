@@ -3,15 +3,16 @@ skinparam packageStyle rectangle
 skinparam shadowing false
 skinparam defaultTextAlignment center
 
-title Circular View with Anomaly Detection Layer
+title Clean Architecture - Circular View with Anomaly Detection Layer
+
 ' ===========================
 ' CIRCULAR LAYERS
 ' ===========================
 
-circle "Goal\n(Find Giant)" as Goal
-circle "Entities\n(解釈空間 / 揺らぐもの)" as Entities
-circle "UseCases\n(検証・解釈の振る舞い)" as UseCases
-circle "Anomaly Detection\nLayer\n(解釈限界の検知)" as Anomaly
+circle "Goal\n(防災の最上位目的)" as Goal
+circle "Entities\n(地滑りドメインの本質)" as Entities
+circle "UseCases\n(アプリケーション振る舞い)" as UseCases
+circle "Anomaly Detection\nLayer\n(未知の兆候検知)" as Anomaly
 circle "Interface\nAdapters\n(技術抽象化)" as Adapters
 circle "Frameworks & Drivers\n(技術層)" as Frameworks
 
@@ -30,18 +31,13 @@ Adapters <<circle>>
 Frameworks <<circle>>
 
 ' ===========================
-' RELATIONSHIPS
+' RELATIONSHIPS (Outer → Inner)
 ' ===========================
 
 Frameworks --> Adapters : depends on
 Adapters --> Anomaly : implements ports
-
 Anomaly --> UseCases : anomaly signals
-UseCases --> Anomaly : validation / assumption update
-
-UseCases --> Entities : interprets / updates
-Entities --> Anomaly : interpretation limits
-
+UseCases --> Entities : uses domain
 Goal -[dashed]-> Entities : conceptual guidance
 Goal -[dashed]-> UseCases : conceptual guidance
 Goal -[dashed]-> Anomaly : conceptual guidance
@@ -51,39 +47,44 @@ Goal -[dashed]-> Anomaly : conceptual guidance
 ' ===========================
 
 note right of Goal
-  最大の目的（Policy）
-  - 「Giantを発見する」
+  最上位の目的（Policy）
+  - 「災害を防ぐ」
+  - コードには入らないが全体を方向付ける
 end note
 
 note right of Entities
-  解釈されたドメイン構造（揺らぐ）
-  - Spatial information
-  - Reservoir / Seal / Trap / Charge
-  - Geological history
-  - CRS / DHA
-  - RiskScore（不確実）
-  - Uncertainty
-  - AnomalyScore / AnomalyFlag
-    （Uncertainty の end member）
+  ドメインの不変構造
+  - SlopeUnit
+  - Valley
+  - House
+  - HazardArea
+  - MonitoringPoint
+  - CRS
+  - RiskScore
+  - AnomalyScore
+  - AnomalyFlag
 end note
 
 note right of UseCases
-  人間中心の検証・解釈行為
-  - SearchDocuments
-  - ScoreRisk (DHA / CRS)
-  - MapRisks
+  アプリケーションの振る舞い
+  - ScoreRisk
   - IntegrateCRS
-  - ExplainInterpretation
-  ※ 正解を出す層ではない
+  - MapHazardArea
+  - SearchDocuments
+  - ExplainRisk
+  - PublishAlert
 end note
 
+'false positive
+
 note right of Anomaly
-  異常検知レイヤー
-  = 現行解釈では説明不能な兆候
-  - DetectAnomalousSegments
-  - DetectSpatialOutliers
-  - DetectKGStructuralAnomalies
-  - Generate AnomalySignal
+  異常検知レイヤー（unknown unknown）
+  - DetectAnomalousSegmentsUseCase
+  - DetectSpatialOutliersUseCase
+  - DetectMonitoringAnomaliesUseCase
+  - DetectKGStructuralAnomaliesUseCase
+  - IAnomalyDetectionService（抽象ポート）
+  - AnomalyScore / AnomalyFlag を生成
 end note
 
 note right of Adapters
@@ -91,21 +92,22 @@ note right of Adapters
   - MongoGisRepository
   - MongoVectorSearchRepository
   - MongoKnowledgeGraphService
-  - RiskScoringService
-    (AI support / Human decide)
-  - LLMExplanationService
-  - PolyPLAdapter
+  - MLBasedRiskScoringService
+  - OpenAILLMExplanationService
+  - KafkaAlertPublisher
+  - PythonImagePipelineAdapter
+  - AnomalyDetectionAdapter（画像特徴量 / 地形特徴量 / KG構造）
 end note
 
 note right of Frameworks
   技術の実装層
-  - GPP
   - FastAPI
   - MongoDB (2dsphere, Vector)
   - QGIS
-  - AI API
+  - Python pipeline
+  - OpenAI API
   - DI Container
-  - YAML / JSON Config
+  - YAML/JSON Config
 end note
 
 @enduml

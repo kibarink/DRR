@@ -1,0 +1,61 @@
+@startuml
+allowmixing
+top to bottom direction
+
+skinparam nodesep 10
+skinparam ranksep 10
+
+' ===== PolyPL =====
+package "PolyPL" as PolyPL #E6F2FF {
+
+  rectangle "Polygonize Engine" as A1 #ffccfaff
+  rectangle "OUT: GeoJson Polygons\n(facies, maturity, etc.)" as A2 #CCE5FF  
+  rectangle "Streamlit UI\nPolygon Attribute Editor" as FP #CCFFCC
+  database "MongoDB: Polygons\n& Metadata" as M2 #FFFFCC
+
+
+  A1 --> A2
+  A2 --> FP
+  FP --> M2
+}
+
+' ===== CRS Module =====
+package "CRS Module" as CRS #FFE5CC {
+  rectangle "Reports / Studies\nDoc Intelligence" as C1 #FFD699
+  database "MongoDB: CRS Params" as C2 #FFFFCC
+  rectangle "CRS Spatial Engine" as C3 #ffccfaff
+  rectangle "GeoJSON/TIFF Output" as C4 #FFB366
+
+  C1 --> C2
+  C2 --> C3
+  C3 --> C4
+  M2 --> C3
+}
+
+' ===== DHA Module =====
+package "DHA Module" as DHA #CCFFCC {
+  database "MongoDB: DHA_Wells" as D1 #FFFFCC
+  rectangle "Streamlit UI\nDHA Editor" as D3 #99FF99
+  rectangle "FastAPI\nSVG Generator" as D2 #66FFCC
+  rectangle "DHA GeoJSON Export" as D4 #99FFCC
+
+  D1 --> D3
+  D3 --> D1
+  D1 --> D2
+  D2 --> D1
+  D3 --> D4
+  D1 --> C3
+}
+
+' ===== QGIS Sync =====
+rectangle "QGIS Plugin\n(DHA Icon Sync)" as QGISPlugin #85edffff
+
+' ===== QGIS Viewer =====
+rectangle "QGIS Viewer\n(DHA Symbols + CRS Maps)" as QGISViewer #FF9999
+
+D2 --> QGISPlugin
+QGISPlugin --> QGISViewer
+D4 --> QGISViewer
+C4 --> QGISViewer
+
+@enduml
