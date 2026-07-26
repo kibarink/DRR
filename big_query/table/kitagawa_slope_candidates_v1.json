@@ -1,0 +1,128 @@
+[
+  {
+    "name": "geo",
+    "mode": "NULLABLE",
+    "type": "GEOGRAPHY",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "aoi_name",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "area_km2",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "area_m2",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "candidate_value",
+    "mode": "NULLABLE",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "confidence",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "data_sources",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "interpretation",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "mean_ndvi_source",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "mean_slope_source",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "method",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "min_connected_pixels",
+    "mode": "NULLABLE",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "ndvi_threshold_max",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "risk_type",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "s2_end",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "s2_start",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "slope_threshold_min_deg",
+    "mode": "NULLABLE",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "system:index",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  }
+]

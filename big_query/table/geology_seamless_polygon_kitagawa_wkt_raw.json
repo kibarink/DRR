@@ -1,0 +1,37 @@
+[
+  {
+    "name": "source_file",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "feature_index",
+    "mode": "NULLABLE",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "symbol",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "wkt",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "properties_json",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  }
+]

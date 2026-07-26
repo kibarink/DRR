@@ -1,0 +1,100 @@
+[
+  {
+    "name": "candidate_id",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "cluster_id",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "validation_status",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "validation_label_ja",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "hazard_zone_count",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "warning_zone_count",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "special_warning_zone_count",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "overlap_area_km2",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "overlap_ratio",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "phenomenon_types",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "zone_types",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "zone_names",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "location_names",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "wkt",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  }
+]

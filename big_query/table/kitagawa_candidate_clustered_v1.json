@@ -1,0 +1,164 @@
+[
+  {
+    "name": "candidate_id",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "geom",
+    "mode": "",
+    "type": "GEOGRAPHY",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "centroid_geom",
+    "mode": "",
+    "type": "GEOGRAPHY",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "cluster_id",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "nearest_centroids_distance",
+    "mode": "REPEATED",
+    "type": "RECORD",
+    "description": "",
+    "fields": [
+      {
+        "name": "CENTROID_ID",
+        "mode": "",
+        "type": "INTEGER",
+        "description": "",
+        "fields": []
+      },
+      {
+        "name": "DISTANCE",
+        "mode": "",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "log_area_km2",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "log_perimeter_km",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "compactness",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "shape_index",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "log_neighbor_count_500m",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "log_neighbor_count_1000m",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "log_neighbor_count_1500m",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "log_nearest_neighbor_m",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "geology_lithology_count",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "dominant_lithology_share",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "dominant_lithology_ja",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "dominant_lithology_en",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "method",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "ndvi_threshold_max",
+    "mode": "",
+    "type": "FLOAT",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "slope_threshold_min_deg",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "confidence",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  }
+]

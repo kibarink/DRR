@@ -1,0 +1,93 @@
+[
+  {
+    "name": "phenomenon_code",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "phenomenon_type_ja",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "zone_code",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "zone_type_ja",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "prefecture_code",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "prefecture_ja",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "zone_id",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "zone_name",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "location_name",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "announcement_date_raw",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "special_warning_not_designated_flag",
+    "mode": "",
+    "type": "INTEGER",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "special_warning_status",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  },
+  {
+    "name": "wkt",
+    "mode": "",
+    "type": "STRING",
+    "description": "",
+    "fields": []
+  }
+]
