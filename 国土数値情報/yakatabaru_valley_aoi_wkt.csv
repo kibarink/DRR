@@ -1,0 +1,2 @@
+﻿valley_id,valley_name,purpose,properties_json,wkt
+yakatabaru_valley_01,尾形原北側小谷,valley_scale_sediment_runout_screening,"{""valley_id"": ""yakatabaru_valley_01"", ""valley_name"": ""尾形原北側小谷"", ""purpose"": ""valley_scale_sediment_runout_screening""}","POLYGON ((131.677246 32.706732, 131.678738 32.70799, 131.680158 32.708883, 131.68127 32.709453, 131.684211 32.709614, 131.68525 32.70919, 131.685367 32.708561, 131.683596 32.707273, 131.682265 32.706351, 131.681752 32.705415, 131.680611 32.704669, 131.677158 32.705751, 131.677246 32.706732))"

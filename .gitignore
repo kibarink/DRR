@@ -12,6 +12,10 @@ QGIS/*.qgz
 .vscode/
 Git_GitHub/
 
+.obsidian/
+copilot/
+my_note/
+
 
 # ChatGPT/Gemini Exportの生データは管理しない
 # ChatLogs/**/files/
