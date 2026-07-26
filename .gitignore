@@ -16,6 +16,47 @@ Git_GitHub/
 copilot/
 my_note/
 
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.tmp/
+pytest-cache-files-*/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Runtime
+logs/
+*.log
+
+# files
+*.qgz
+*.sqlite
+*.png
+*.jpg
+*.tiff
+*.tif
+*.pdf
+*.zip
+
+
+
 
 # ChatGPT/Gemini Exportの生データは管理しない
 # ChatLogs/**/files/
