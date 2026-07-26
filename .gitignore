@@ -60,5 +60,5 @@ logs/
 
 # ChatGPT/Gemini Exportの生データは管理しない
 # ChatLogs/**/files/
-# ChatLogs/*_Export/**
+# ChatLogs/*_Export/**ng
 # ChatLogs/conversations.json
